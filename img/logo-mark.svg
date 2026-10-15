@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Alex Ray Casino">
+  <!--
+    The mark: a poker chip carrying an AR monogram.
+
+    A chip was chosen over a crown, dice or card suit because it is the one
+    casino object that survives being 38 pixels wide - the silhouette alone
+    reads as gambling even when no detail is legible, which is the condition
+    this logo actually lives in. Everything decorative is layered inside that
+    silhouette rather than around it, so nothing is lost when it shrinks.
+
+    Drawn in SVG rather than rendered to PNG so it stays sharp on any display
+    and can be recoloured from CSS.
+  -->
+  <defs>
+    <linearGradient id="arGold" x1="14" y1="6" x2="52" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff3b0"/>
+      <stop offset=".38" stop-color="#ffd700"/>
+      <stop offset=".72" stop-color="#ffa500"/>
+      <stop offset="1" stop-color="#b8730a"/>
+    </linearGradient>
+
+    <linearGradient id="arFace" x1="18" y1="14" x2="46" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16203a"/>
+      <stop offset="1" stop-color="#080d18"/>
+    </linearGradient>
+
+    <linearGradient id="arText" x1="24" y1="24" x2="42" y2="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff8d6"/>
+      <stop offset=".55" stop-color="#ffd700"/>
+      <stop offset="1" stop-color="#ff9f1a"/>
+    </linearGradient>
+
+    <!-- Specular sweep across the top-left, the thing that makes metal read as
+         metal rather than as flat yellow. -->
+    <linearGradient id="arShine" x1="16" y1="8" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- chip body -->
+  <circle cx="32" cy="32" r="30" fill="url(#arGold)"/>
+
+  <!-- edge inserts: eight spokes, the detail that says "chip" and not "coin" -->
+  <g fill="#0b1220" opacity=".82">
+    <rect x="29" y="1.5" width="6" height="9" rx="1.6"/>
+    <rect x="29" y="53.5" width="6" height="9" rx="1.6"/>
+    <rect x="1.5" y="29" width="9" height="6" rx="1.6"/>
+    <rect x="53.5" y="29" width="9" height="6" rx="1.6"/>
+    <rect x="29" y="1.5" width="6" height="9" rx="1.6" transform="rotate(45 32 32)"/>
+    <rect x="29" y="53.5" width="6" height="9" rx="1.6" transform="rotate(45 32 32)"/>
+    <rect x="1.5" y="29" width="9" height="6" rx="1.6" transform="rotate(45 32 32)"/>
+    <rect x="53.5" y="29" width="9" height="6" rx="1.6" transform="rotate(45 32 32)"/>
+  </g>
+
+  <!-- inner face -->
+  <circle cx="32" cy="32" r="23" fill="url(#arFace)"/>
+  <circle cx="32" cy="32" r="23" fill="none" stroke="url(#arGold)" stroke-width="1.6"/>
+  <circle cx="32" cy="32" r="19.5" fill="none" stroke="#ffd700" stroke-width=".6" opacity=".38"/>
+
+  <!-- AR monogram -->
+  <text x="32" y="32" fill="url(#arText)"
+        font-family="'Russo One', 'Arial Black', system-ui, sans-serif"
+        font-size="19" font-weight="700" letter-spacing="-.5"
+        text-anchor="middle" dominant-baseline="central">AR</text>
+
+  <!-- highlight, drawn last so it sits over the metal -->
+  <path d="M32 2a30 30 0 0 0-21.2 51.2A30 30 0 0 1 53.2 10.8 29.9 29.9 0 0 0 32 2Z"
+        fill="url(#arShine)"/>
+</svg>
