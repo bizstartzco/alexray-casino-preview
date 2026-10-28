@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Alex Ray Casino">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Instant Stakes">
   <!--
-    The mark: a poker chip carrying an AR monogram.
+    The mark: a poker chip carrying an IS monogram.
 
     A chip was chosen over a crown, dice or card suit because it is the one
     casino object that survives being 38 pixels wide - the silhouette alone
@@ -13,21 +13,21 @@
   -->
   <defs>
     <linearGradient id="arGold" x1="14" y1="6" x2="52" y2="58" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fff3b0"/>
-      <stop offset=".38" stop-color="#ffd700"/>
-      <stop offset=".72" stop-color="#ffa500"/>
-      <stop offset="1" stop-color="#b8730a"/>
+      <stop offset="0" stop-color="#ffe9a3"/>
+      <stop offset=".38" stop-color="#ffc53d"/>
+      <stop offset=".72" stop-color="#e0a021"/>
+      <stop offset="1" stop-color="#8a5a08"/>
     </linearGradient>
 
     <linearGradient id="arFace" x1="18" y1="14" x2="46" y2="52" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#16203a"/>
-      <stop offset="1" stop-color="#080d18"/>
+      <stop offset="0" stop-color="#14183a"/>
+      <stop offset="1" stop-color="#0a0c1c"/>
     </linearGradient>
 
     <linearGradient id="arText" x1="24" y1="24" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fff8d6"/>
-      <stop offset=".55" stop-color="#ffd700"/>
-      <stop offset="1" stop-color="#ff9f1a"/>
+      <stop offset="0" stop-color="#effeff"/>
+      <stop offset=".55" stop-color="#7cf6ff"/>
+      <stop offset="1" stop-color="#ff2d9b"/>
     </linearGradient>
 
     <!-- Specular sweep across the top-left, the thing that makes metal read as
@@ -56,13 +56,13 @@
   <!-- inner face -->
   <circle cx="32" cy="32" r="23" fill="url(#arFace)"/>
   <circle cx="32" cy="32" r="23" fill="none" stroke="url(#arGold)" stroke-width="1.6"/>
-  <circle cx="32" cy="32" r="19.5" fill="none" stroke="#ffd700" stroke-width=".6" opacity=".38"/>
+  <circle cx="32" cy="32" r="19.5" fill="none" stroke="#00e5ff" stroke-width=".6" opacity=".38"/>
 
-  <!-- AR monogram -->
+  <!-- IS monogram -->
   <text x="32" y="32" fill="url(#arText)"
-        font-family="'Russo One', 'Arial Black', system-ui, sans-serif"
-        font-size="19" font-weight="700" letter-spacing="-.5"
-        text-anchor="middle" dominant-baseline="central">AR</text>
+        font-family="'Montserrat', 'Arial Black', system-ui, sans-serif"
+        font-size="19" font-weight="800" letter-spacing="-.5"
+        text-anchor="middle" dominant-baseline="central">IS</text>
 
   <!-- highlight, drawn last so it sits over the metal -->
   <path d="M32 2a30 30 0 0 0-21.2 51.2A30 30 0 0 1 53.2 10.8 29.9 29.9 0 0 0 32 2Z"
